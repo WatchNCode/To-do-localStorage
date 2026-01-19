@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap");
+
+:root {
+  /* Modern Dark Color Palette */
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --secondary: #3b82f6;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  /* Dark Theme Colors */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border: #334155;
+
+  /* Dark Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items:start;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: var(--bg-primary);
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  background: var(--bg-card);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(10px);
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-app h2 {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: -0.025em;
+}
+
+.todo-app h2 img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Input Row */
+.row {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+input {
+  flex: 1;
+  border: 2px solid var(--border);
+  outline: none;
+  background: var(--bg-secondary);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1rem;
+  color: var(--text-primary);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus {
+  border-color: var(--primary);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: var(--space-md) var(--space-xl);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Task List */
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+ul li {
+  list-style: none;
+  font-size: 1rem;
+  padding: var(--space-lg);
+  padding-right: 3.5rem;
+  padding-left: 3rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+  font-weight: 400;
+  line-height: 1.5;
+  border: 2px solid transparent;
+}
+
+ul li:hover {
+  background: #2d3748;
+  border-color: var(--primary-light);
+  transform: translateX(-4px);
+}
+
+/* Checkbox Circle */
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 2.5px solid var(--primary);
+  background: var(--bg-card);
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--space-lg);
+  transition: all 0.2s ease;
+}
+
+/* Checked State */
+ul li.checked {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  background: #1a2e1a;
+  border-color: var(--success);
+}
+
+ul li.checked:hover {
+  transform: none;
+  background: #234d23;
+}
+
+ul li.checked::before {
+  background: var(--success);
+  border-color: var(--success);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Delete Button */
+ul li span {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  color: var(--danger);
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  opacity: 0;
+  font-weight: 300;
+}
+
+ul li:hover span {
+  opacity: 1;
+}
+
+ul li span:hover {
+  background: #3f1f1f;
+  color: #fca5a5;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Empty State */
+#list-container:empty::after {
+  content: "لا توجد مهام بعد... ابدأ بإضافة مهمة جديدة! ";
+  display: block;
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  body {
+    padding: var(--space-md);
+  }
+
+  .container {
+    padding: var(--space-lg);
+  }
+
+  .todo-app h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  ul li {
+    font-size: 0.95rem;
+  }
+}
