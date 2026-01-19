@@ -2,7 +2,7 @@
 
 A simple, elegant Arabic to-do list application with a modern dark theme design. This application allows users to manage their daily tasks with persistent storage using browser localStorage.
 
-## ✨ Features
+##  Features
 
 - **Arabic Interface**: Fully RTL (Right-to-Left) support with Arabic language
 - **Modern Dark Theme**: Eye-comfortable dark design with smooth animations
@@ -14,7 +14,7 @@ A simple, elegant Arabic to-do list application with a modern dark theme design.
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Interactive UI**: Smooth hover effects and transitions
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -28,7 +28,7 @@ A simple, elegant Arabic to-do list application with a modern dark theme design.
 
 That's it! The application runs entirely in the browser.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 To-do/
@@ -38,7 +38,7 @@ To-do/
 └── README.md     # Project documentation
 ```
 
-## 🎯 Usage
+##  Usage
 
 1. **Add a Task**: Type your task in the input field and click "اضف المهمه" (Add Task)
 2. **Complete a Task**: Click on a task to mark it as completed (strikethrough)
@@ -46,7 +46,7 @@ To-do/
 
 All changes are automatically saved to your browser's localStorage.
 
-## 💻 Technical Details
+##  Technical Details
 
 ### Technologies Used
 
@@ -61,7 +61,7 @@ All changes are automatically saved to your browser's localStorage.
 - **CSS Animations**: Smooth transitions and hover effects
 - **Responsive Design**: Adapts to different screen sizes
 
-## 🎨 Customization
+##  Customization
 
 You can customize the appearance by modifying `style.css`:
 
@@ -69,7 +69,7 @@ You can customize the appearance by modifying `style.css`:
 - **Fonts**: Change the font family in the body selector
 - **Animations**: Adjust transition durations and effects
 
-## 🌐 Browser Compatibility
+## Browser Compatibility
 
 This application works on all modern browsers that support:
 
@@ -77,18 +77,19 @@ This application works on all modern browsers that support:
 - ES6 JavaScript
 - CSS3 features
 
-## 📝 License
+##  License
 
 This project is open source and available for personal and commercial use.
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to fork this project and submit pull requests for any improvements.
 
-## 📧 Contact
+##  Contact
 
 For questions or suggestions, please open an issue in the repository.
 
 ---
 
 **Made with Watch & Code for productivity**
+
